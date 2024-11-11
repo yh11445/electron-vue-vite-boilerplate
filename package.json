@@ -1,0 +1,53 @@
+{
+  "name": "electron-vue-vite-boilerplate",
+  "version": "0.0.1",
+  "description": "Electron, Vue, Vite boilerplate",
+  "author": {
+    "name": "Yeonghoon Kim",
+    "email": "yh11445@gmail.com"
+  },
+  "main": "electron/main.js",
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "yarn build && node scripts/dev-server.js",
+    "electron-build": "yarn build && vite build && electron-builder",
+    "electron-build:win": "yarn build && vite build && electron-builder --win",
+    "electron-build:mac": "yarn build && vite build && electron-builder --mac",
+    "electron-build:linux": "yarn build && vite build && electron-builder --linux",
+    "format": "prettier --write .",
+    "clean": "rimraf dist build node_modules/.cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yh11445/electron-vue-vite-boilerplate.git"
+  },
+  "devDependencies": {
+    "@types/node": "^22.6.1",
+    "@vitejs/plugin-vue": "^4.4.1",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "chalk": "^4.1.2",
+    "chokidar": "^3.5.3",
+    "electron": "^27.1.0",
+    "electron-builder": "^24.2.1",
+    "electron-builder-squirrel-windows": "24.13.3",
+    "eslint": "^9.10.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "sass": "^1.79.1",
+    "sass-loader": "^16.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.4.7"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "@vue/devtools": "^7.4.5",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vue": "^3.3.8",
+    "vue-i18n": "^10.0.3",
+    "vue-router": "^4.4.5",
+    "vuetify": "^3.7.2",
+    "vuex": "^4.1.0"
+  }
+}
